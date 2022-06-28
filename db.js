@@ -4,7 +4,7 @@ const pool = createPool({
   host: "localhost",
   user: "root",
   password: "ghumabo11",
-  database: "test",
+  database: "sust_kroy_bikroy",
   connectionLimit: 10,
 });
 

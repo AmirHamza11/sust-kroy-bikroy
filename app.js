@@ -1,46 +1,45 @@
 "use strict";
 
 const express = require("express");
-const pool = require("./db");
 const dotenv = require("dotenv");
 const path = require("path");
+const cookieParser = require("cookie-parser");
+const authController = require("./controllers/authController");
 
 const app = express();
 
 dotenv.config({ path: "./.env" });
 
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "ghumabo11",
-//   database: "test",
-// });
-
-// connection.connect(() => {
-//   console.log("connected");
-// });
-
-pool.query("Select 1+1 as solution", (err, rows, fields) => {
-  if (err) throw err;
-  console.log(fields);
-});
-
+app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser());
 
-const port = 3000;
+// -----page routes-----
 
-app.get("/", (req, res) => {
+app.get("/", authController.isLoggedIn, (req, res) => {
+  res.status(200).json({});
+});
+
+app.get("/login", (req, res) => {
   res.status(200).json({
-    title: "homepage",
+    message: "login",
   });
 });
 
-app.use("/auth", require("./routes/auth"));
-
-app.listen(port, () => {
-  console.log(`App is listening at port ${port}`);
+app.get("/register", (req, res) => {
+  res.status(200).json({
+    message: "registration",
+  });
 });
 
-// connection.end();
+app.get("/profile", authController.isLoggedIn, (req, res) => {
+  res.status(200).json({});
+});
+
+app.use("/auth", require("./routes/authRoute"));
+
+app.listen(3000, () => {
+  console.log(`App is listening at port ${3000}`);
+});
