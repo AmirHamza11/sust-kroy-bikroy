@@ -96,12 +96,14 @@ exports.login = (req, res) => {
       }
 
       const user_id = results[0].user_id;
-      const jwtToken = jwt.sign({ user_id }, "qwe123", {
-        expiresIn: "30d",
+      const jwtToken = jwt.sign({ user_id }, process.env.JWT_SECRET_KEY, {
+        expiresIn: process.env.JWT_EXPIRES_IN,
       });
 
       const cookieOptions = {
-        expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+        expires: new Date(
+          Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+        ),
         httpOnly: true,
       };
 

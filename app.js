@@ -8,7 +8,7 @@ const authController = require("./controllers/authController");
 
 const app = express();
 
-dotenv.config({ path: "./.env" });
+dotenv.config({ path: __dirname + "./.env" });
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
