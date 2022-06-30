@@ -9,19 +9,19 @@ exports.register = (req, res) => {
   const { full_name, email, password, confirmed_password } = req.body;
 
   if (!full_name) {
-    return res.status(400).json({
+    return res.status(400).render("register", {
       message: "Please provide your full name",
     });
   } else if (!email) {
-    return res.status(400).json({
+    return res.status(400).render("register", {
       message: "Please provide your email",
     });
   } else if (!password) {
-    return res.status(400).json({
+    return res.status(400).render("register", {
       message: "Please provide a password",
     });
   } else if (password !== confirmed_password) {
-    return res.status(400).json({
+    return res.status(400).render("register", {
       message: "Passwords do not match",
     });
   }
@@ -38,7 +38,7 @@ exports.register = (req, res) => {
       }
 
       if (results.length > 0) {
-        return res.status(400).json({
+        return res.status(400).render("register", {
           message: "email already in use",
         });
       }
@@ -56,10 +56,10 @@ exports.register = (req, res) => {
             });
           }
 
+          //TODO: directly log in to account
+
           console.log(results);
-          return res.status(200).json({
-            message: "registration successful",
-          });
+          return res.status(200).redirect("/login");
         }
       );
     }
@@ -69,12 +69,13 @@ exports.register = (req, res) => {
 exports.login = (req, res) => {
   const { email, password } = req.body;
 
+  // TODO: change to redirect
   if (!email) {
-    return res.status(400).json({
+    return res.status(400).render("login", {
       message: "Please provide your email",
     });
   } else if (!password) {
-    return res.status(400).json({
+    return res.status(400).render("login", {
       message: "Please provide your password",
     });
   }
@@ -90,7 +91,7 @@ exports.login = (req, res) => {
       }
 
       if (!results || !(await bcrypt.compare(password, results[0].password))) {
-        return res.status(400).json({
+        return res.status(400).render("login", {
           message: "email or password is incorrect",
         });
       }
@@ -108,10 +109,7 @@ exports.login = (req, res) => {
       };
 
       res.cookie("jwtToken", jwtToken, cookieOptions);
-      res.status(200).json({
-        message: "login successful",
-        token: jwtToken,
-      });
+      res.status(200).redirect("/");
     }
   );
 };
@@ -150,12 +148,6 @@ exports.isLoggedIn = async (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
-  res.cookie("jwtToken", "dummy", {
-    expires: new Date(Date.now() + 2000),
-    httpOnly: true,
-  });
-
-  res.status(200).json({
-    message: "logout successful",
-  });
+  res.clearCookie("jwtToken", { httpOnly: true });
+  res.status(200).redirect("/");
 };
