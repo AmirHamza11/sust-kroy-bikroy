@@ -19,23 +19,31 @@ app.use(cookieParser());
 // -----page routes-----
 
 app.get("/", authController.isLoggedIn, (req, res) => {
-  res.status(200).json({});
+  res.status(200).render("index", {
+    user: req.user,
+  });
 });
 
 app.get("/login", (req, res) => {
-  res.status(200).json({
-    message: "login",
+  res.status(200).render("login", {
+    message: null,
   });
 });
 
 app.get("/register", (req, res) => {
-  res.status(200).json({
-    message: "registration",
+  res.status(200).render("register", {
+    message: null,
   });
 });
 
 app.get("/profile", authController.isLoggedIn, (req, res) => {
-  res.status(200).json({});
+  if (req.user) {
+    res.status(200).render("profile", {
+      user: req.user,
+    });
+  } else {
+    res.status(302).redirect("/login");
+  }
 });
 
 app.use("/auth", require("./routes/authRoute"));
