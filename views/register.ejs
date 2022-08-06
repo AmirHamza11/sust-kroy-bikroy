@@ -14,14 +14,35 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <nav>
+    <header class="header">
+      <a class="website-name" href="/">
+        <div class="name1">SUST</div>
+        <div class="name2">KROY BIKROY</div>
+      </a>
+
+      <nav class="main-nav">
+        <div class="search-box">
+          <ion-icon class="search-icon" name="search"></ion-icon>
+        </div>
+
+        <ul>
+          <ion-icon class="icons" name="notifications-outline"></ion-icon>
+          <li><a href="/">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        </ul>
+
+        <!-- <ion-icon class="icons" name="person"></ion-icon> -->
+      </nav>
+    </header>
+    <!-- <nav>
       <h4>SUST KROY BIKROY</h4>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
     <div class="container mt-4 auth-container">
       <div class="card">
@@ -30,7 +51,12 @@
           <form action="/auth/register" method="POST">
             <div class="mb-3">
               <label for="name">Name <span class="required">*</span></label>
-              <input type="text" class="form-control" id="name" name="name" />
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="full_name"
+              />
             </div>
 
             <div class="mb-3">
@@ -81,5 +107,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>

@@ -21,7 +21,16 @@
         </div>
 
         <ion-icon class="icons" name="notifications-outline"></ion-icon>
-        <ion-icon class="icons" name="person"></ion-icon>
+
+        <% if(user) { %>
+          <a href="/profile"><ion-icon class="icons" name="person"></ion-icon></a>
+         
+          <!-- <li><button type="button" class="btn btn-danger"><a href="/auth/logout">Logout</a></button></li> -->
+        <% } else { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        <% } %>
+        <!-- <ion-icon class="icons" name="person"></ion-icon> -->
       </nav>
     </header>
     
@@ -52,74 +61,74 @@
         </h1>
         <hr>
         <div class="container grid--3-cols">
-          <div class="products">
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
-          <div class="products">
+          </div></a>
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
-          <div class="products">
+          </div></a>
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
+          </div></a>
           
         </div>
         <div class="container grid--3-cols">
-          <div class="products">
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
-          <div class="products">
+          </div></a>
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
-          <div class="products">
-            <img class="product-img"  src="/images/watch2.jpg">
+          </div></a>
+          <a href="/product"><div class="products">
+            <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
+          </div></a>
         </div>
         <div class="container grid--3-cols">
-          <div class="products">
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
-          <div class="products">
+          </div></a>
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
-          <div class="products">
+          </div></a>
+          <a href="/product"><div class="products">
             <img class="product-img"  src="/images/watch.jpg">
             <div class="price-container">
               <h1 class="product-name">Men Wrist Watch</h1>
               <h1 class="product-price">Tk.1500</h1>
             </div>
-          </div>
+          </div></a>
           
         </div>
         
@@ -273,7 +282,7 @@
     </main>
   
   
-
+    
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>

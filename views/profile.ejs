@@ -14,14 +14,41 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <nav>
+    <header class="header">
+      <a class="website-name" href="/">
+        <div class="name1">SUST</div>
+        <div class="name2">KROY BIKROY</div>
+      </a>
+
+      <nav class="main-nav">
+        <div class="search-box">
+          <ion-icon class="search-icon" name="search"></ion-icon>
+        </div>
+
+        <ul>
+          <ion-icon class="icons" name="notifications-outline"></ion-icon>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/profile"
+              ><ion-icon class="icons" name="person"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="btn btn-danger" href="/auth/logout">Logout</a>
+          </li>
+        </ul>
+
+        <!-- <ion-icon class="icons" name="person"></ion-icon> -->
+      </nav>
+    </header>
+    <!-- <nav>
       <h4>SUST KROY BIKROY</h4>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
     <div class="container mt-4 container-profile">
       <div class="row">
@@ -35,7 +62,7 @@
               />
             </div>
             <div class="card-body">
-              <h5 class="card-title"><%= user.full_name %></h5>
+              <h5 class="card-title profile-text"><%= user.full_name %></h5>
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Delectus sunt sint aliquid soluta iure saepe dolore amet magni
@@ -49,7 +76,9 @@
           <div class="card text-center">
             <div class="card-header">Profile Page</div>
             <div class="card-body">
-              <h5 class="card-title">Hey <%= user.full_name %> welcome back</h5>
+              <h5 class="card-title profile-text">
+                Hey <%= user.full_name %> welcome back
+              </h5>
               <p class="card-text">
                 This is your profile page where you can add all the information
                 about yourself
@@ -66,5 +95,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>

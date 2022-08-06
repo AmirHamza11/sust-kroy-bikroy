@@ -46,7 +46,18 @@ app.get("/profile", authController.isLoggedIn, (req, res) => {
   }
 });
 
+app.get("/product", (req, res) => {
+  res.status(200).render("product");
+});
+
 app.use("/auth", require("./routes/authRoute"));
+
+app.use((req, res, next) => {
+  res.status(404).render("error", {
+    title: "404 - Page Not Found",
+    message: "Oops!!! The page you requested doesn't exist.",
+  });
+});
 
 app.listen(3000, () => {
   console.log(`App is listening at port ${3000}`);
