@@ -6,7 +6,7 @@ const { promisify } = require("util");
 exports.register = (req, res) => {
   console.log(req.body);
 
-  const { full_name, email, password, confirmed_password } = req.body;
+  const { full_name, email, password, confirmedPassword } = req.body;
 
   if (!full_name) {
     return res.status(400).render("register", {
@@ -20,7 +20,7 @@ exports.register = (req, res) => {
     return res.status(400).render("register", {
       message: "Please provide a password",
     });
-  } else if (password !== confirmed_password) {
+  } else if (password !== confirmedPassword) {
     return res.status(400).render("register", {
       message: "Passwords do not match",
     });
@@ -32,8 +32,9 @@ exports.register = (req, res) => {
     async (error, results) => {
       if (error) {
         console.log(error);
-        return res.status(500).json({
-          error,
+        return res.status(500).render("error", {
+          title: "500 - Internal Server Error",
+          message: "We're sorry. Something went wrong on our side.",
         });
       }
 
@@ -51,8 +52,9 @@ exports.register = (req, res) => {
         (error, results) => {
           if (error) {
             console.log(error);
-            return res.status(500).json({
-              error,
+            return res.status(500).render("error", {
+              title: "500 - Internal Server Error",
+              message: "We're sorry. Something went wrong on our side.",
             });
           }
 
@@ -85,8 +87,10 @@ exports.login = (req, res) => {
     [email],
     async (error, results) => {
       if (error) {
-        return res.status(500).json({
-          error,
+        console.log(error);
+        return res.status(500).render("error", {
+          title: "500 - Internal Server Error",
+          message: "We're sorry. Something went wrong on our side.",
         });
       }
 
@@ -128,8 +132,9 @@ exports.isLoggedIn = async (req, res, next) => {
         (error, results) => {
           if (error) {
             console.log(error);
-            return res.status(500).json({
-              error,
+            return res.status(500).render("error", {
+              title: "500 - Internal Server Error",
+              message: "We're sorry. Something went wrong on our side.",
             });
           }
 
@@ -138,8 +143,10 @@ exports.isLoggedIn = async (req, res, next) => {
         }
       );
     } catch (err) {
-      return res.status(502).json({
-        err,
+      console.log(error);
+      return res.status(500).render("error", {
+        title: "500 - Internal Server Error",
+        message: "We're sorry. Something went wrong on our side.",
       });
     }
   } else {
