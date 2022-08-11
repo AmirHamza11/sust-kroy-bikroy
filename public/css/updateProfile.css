@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/*************************************************/
+/*HEADER*/
+/*************************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: white;
+  padding: 3.2rem 4.8rem;
+}
+.website-name {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+}
+.name1 {
+  color: rgb(245, 245, 42);
+  padding-right: 1.2rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+.search-box {
+  background-color: rgb(247, 239, 239);
+  width: 40rem;
+  height: 3rem;
+  border-radius: 2.4rem;
+}
+.icons {
+  color: black;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.search-icon {
+  color: black;
+  height: 2rem;
+  width: 2rem;
+  padding-left: 37rem;
+  padding-top: 0.5rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 22rem;
+  padding-bottom: 1.2rem;
+  list-style: none;
+}
+.category-list {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+/*************************************************/
+/*Edit Profile*/
+/*************************************************/
+.void {
+  height: 5rem;
+}
+.grid {
+  height: 70rem;
+  margin-top: 5rem;
+}
+.grid--2-cols {
+  display: flex;
+  margin-left: 20rem;
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+  width: 110rem;
+  height: 90rem;
+  column-gap: 18rem;
+}
+.product-img {
+  height: 10rem;
+  width: 10rem;
+  box-sizing: border-box;
+}
+label[for="fname"] {
+  font-size: 1.8rem;
+}
+label[for="lname"] {
+  font-size: 1.8rem;
+}
+label[for="contact"] {
+  font-size: 1.8rem;
+}
+label[for="email"] {
+  font-size: 1.8rem;
+}
+label[for="address"] {
+  font-size: 1.8rem;
+}
+label[for="dept"] {
+  font-size: 1.8rem;
+}
+label[for="session"] {
+  font-size: 1.8rem;
+}
+
+.voidd {
+  height: 2rem;
+}
+input[type="text"] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 4rem;
+  box-sizing: border-box;
+}
+input[type="lname"] {
+  margin-top: 2rem;
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 4rem;
+  box-sizing: border-box;
+}
+input[type="contact"] {
+  margin-top: 2rem;
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 5.5rem;
+  box-sizing: border-box;
+}
+input[type="email"] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 13rem;
+  box-sizing: border-box;
+}
+input[type="address"] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 13rem;
+  box-sizing: border-box;
+}
+input[type="dept"] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 13rem;
+  box-sizing: border-box;
+}
+input[type="session"] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-left: 13rem;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  width: 40%;
+  height: 20%;
+  padding: 12px 20px;
+  margin-left: 22rem;
+  margin-top: 4rem;
+}
+/*************************************************/
+/*FOOTER*/
+/*************************************************/
+.footer {
+  height: 45rem;
+}
+.containerrr {
+  max-width: 100%;
+  height: 45rem;
+  padding: 0 8rem;
+}
+.footer-grid {
+  margin-top: 15em;
+  height: 20rem;
+}
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: grey;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  color: rgb(86, 85, 85);
+  margin-bottom: 4.5rem;
+}
+
+.footer-text {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: grey;
+  margin-bottom: 2rem;
+}
+.footer-title {
+  margin-bottom: 10rem;
+}
+
+.name1 {
+  color: rgb(245, 245, 42);
+  padding-right: 1.2rem;
+}
+.footer-grid--4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6.4rem;
+}
