@@ -1,0 +1,401 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/*************************************************/
+/*HEADER*/
+/*************************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: white;
+  padding: 3.2rem 4.8rem;
+}
+.website-name {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+}
+.name1 {
+  color: rgb(245, 245, 42);
+  padding-right: 1.2rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+.search-box {
+  background-color: rgb(247, 239, 239);
+  width: 40rem;
+  height: 3rem;
+  border-radius: 2.4rem;
+}
+.icons {
+  color: black;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.search-icon {
+  color: black;
+  height: 2rem;
+  width: 2rem;
+  padding-left: 37rem;
+  padding-top: 0.5rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 22rem;
+  padding-bottom: 1.2rem;
+  list-style: none;
+}
+.category-list {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/*************************************************/
+/*PROFILE DESCRIPTION*/
+/*************************************************/
+.void {
+  height: 6rem;
+}
+/*************************************************/
+/*PRODUCT DETAILS*/
+/*************************************************/
+.grid {
+  height: 75rem;
+  margin-top: 5rem;
+}
+.grid--2-cols {
+  display: flex;
+  margin-left: 20rem;
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+  width: 110rem;
+  height: 90rem;
+  column-gap: 15rem;
+}
+.product-img {
+  height: 50rem;
+  width: 40rem;
+}
+.images {
+  height: 30rem;
+  width: 50rem;
+}
+
+.user-name {
+  margin-top: 5rem;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+.info {
+  margin-top: 1.4rem;
+  font-size: 2.8rem;
+  line-height: 4rem;
+  font-weight: 500;
+}
+
+.contact {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.email {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.address {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.dept {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.session {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.chat-now-box {
+  margin-top: 15rem;
+  background-color: goldenrod;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 2.4rem;
+  color: black;
+  align-content: center;
+}
+.chat {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-top: 1.55rem;
+  padding-left: 5rem;
+}
+.buy-now-box {
+  margin-top: 3rem;
+  background-color: black;
+  width: 30rem;
+  height: 5rem;
+  border-radius: 2.4rem;
+  color: white;
+  align-content: center;
+}
+.buy {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding-top: 1.55rem;
+  padding-left: 10rem;
+}
+.update-box {
+  margin-top: 4rem;
+  background-color: rgb(226, 174, 43);
+  width: 30rem;
+  height: 5rem;
+  border-radius: 2.4rem;
+  color: black;
+  align-content: center;
+  margin-left: 5rem;
+}
+.update {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-top: 1.55rem;
+  padding-left: 8rem;
+}
+.voidd {
+  height: 19rem;
+}
+
+.previous-prod-post {
+  height: 41rem;
+}
+.my-order {
+  margin-top: 3rem;
+}
+
+.prev-title {
+  color: black;
+  font-weight: 700;
+  padding-left: 19.5rem;
+  padding-right: 52rem;
+  padding-bottom: 3rem;
+  font-size: 3rem;
+}
+.grid--4-cols {
+  display: flex;
+  padding-left: 16rem;
+  width: 136rem;
+
+  grid-template-columns: repeat(4, 1fr);
+  box-sizing: border-box;
+}
+.img2 {
+  height: 35rem;
+  width: 28rem;
+  margin-left: 3.5rem;
+}
+.img1 {
+  height: 6rem;
+  width: 6rem;
+  margin-left: 3.5rem;
+  margin-top: 15rem;
+}
+.grid--2-col {
+  display: flex;
+
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+
+  height: 10rem;
+  column-gap: 0rem;
+}
+.grid-2-col {
+  display: flex;
+
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+
+  height: 18rem;
+  width: 90rem;
+  column-gap: 30rem;
+}
+.grid-2 {
+  display: flex;
+
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+
+  height: 6rem;
+  width: 30rem;
+  column-gap: 2rem;
+}
+.post-now-box {
+  background-color: rgb(200, 200, 11);
+  width: 20rem;
+  height: 5rem;
+  border-radius: 2.4rem;
+  color: white;
+  align-content: center;
+}
+.post {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding-top: 1.55rem;
+  padding-left: 6rem;
+}
+
+.buyer-order {
+  height: 80rem;
+}
+.card {
+  height: 18rem;
+  width: 92rem;
+  background-color: rgb(238, 231, 231);
+  margin-left: 19rem;
+  border-radius: 1.5rem;
+}
+.voiddd {
+  height: 5rem;
+}
+.voidddd {
+  height: 2rem;
+}
+.first-col {
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+.order-id {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.imgg {
+  height: 8rem;
+  width: 8rem;
+}
+
+.prod-name {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+.seller-id {
+  font-size: 1.6rem;
+  padding-top: 2rem;
+}
+.total-price {
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+.quantity {
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  margin-left: 2rem;
+}
+.status {
+  background-color: rgb(11, 200, 39);
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2.4rem;
+  color: white;
+  align-content: center;
+  margin-top: 2rem;
+}
+.statusp {
+  background-color: orangered;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2.4rem;
+  color: white;
+  align-content: center;
+  margin-top: 2rem;
+}
+.stat {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding-top: 1rem;
+  padding-left: 3.6rem;
+}
+.statp {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding-top: 1rem;
+  padding-left: 4.5rem;
+}
+/*************************************************/
+/*FOOTER*/
+/*************************************************/
+.footer {
+  height: 45rem;
+}
+.containerrr {
+  max-width: 100%;
+  height: 45rem;
+  padding: 0 8rem;
+}
+.footer-grid {
+  margin-top: 15em;
+  height: 20rem;
+}
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: grey;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  color: rgb(86, 85, 85);
+  margin-bottom: 4.5rem;
+}
+
+.footer-text {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: grey;
+  margin-bottom: 2rem;
+}
+.footer-title {
+  margin-bottom: 10rem;
+}
+
+.name1 {
+  color: rgb(245, 245, 42);
+  padding-right: 1.2rem;
+}
+.footer-grid--4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6.4rem;
+}
