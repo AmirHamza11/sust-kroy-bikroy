@@ -18,8 +18,18 @@ body {
 .void {
   height: 15rem;
 }
+
+.anchor {
+  text-decoration: none;
+}
+
 .showMore {
+  text-align: center;
   font-size: 1.8rem;
+}
+
+.showMore:hover {
+  color: #fbcb0a;
 }
 
 /*************************************************/
@@ -73,7 +83,7 @@ body {
 }
 
 .main-nav li a:hover {
-  color: rgb(245, 245, 42);
+  color: #f0a500;
   text-decoration: none;
 }
 .search-box {
@@ -148,11 +158,11 @@ body {
 /*RECENT PRODUCTS*/
 /*************************************************/
 .recent-products {
-  height: 150rem;
+  height: auto;
 }
 .recent-product-title {
   color: black;
-
+  text-align: center;
   padding-left: 52rem;
   padding-right: 52rem;
   padding-bottom: 3rem;
@@ -162,10 +172,11 @@ hr {
   border: 0;
   border-top: 1px solid black;
   padding-bottom: 10rem;
+  margin-right: 30rem;
+  margin-left: 30rem;
 }
 .container {
   max-width: 100%;
-  height: 100rem;
 }
 .container a {
   color: black;
@@ -177,12 +188,12 @@ hr {
   grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
   width: 200rem;
-  height: 40rem;
+  /* height: 40rem; */
   margin-left: auto;
   margin-right: auto;
-
+  row-gap: 8rem;
   padding: 0rem 20rem;
-  padding-bottom: 44rem;
+  padding-bottom: 10rem;
   column-gap: 7rem;
 
   align-self: center;
