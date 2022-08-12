@@ -182,6 +182,7 @@ body {
 }
 .chat {
   font-size: 1.6rem;
+  color: black;
   font-weight: 700;
   line-height: 2rem;
   padding-top: 1.55rem;
@@ -196,7 +197,13 @@ body {
   color: white;
   align-content: center;
 }
+
+.anchor {
+  text-decoration: none;
+}
+
 .buy {
+  color: white;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 2rem;
@@ -212,7 +219,7 @@ body {
   height: 46rem;
 }
 .suggestion-text {
-  margin-top: 8rem;
+  margin-top: 16rem;
   font-size: 3rem;
   color: black;
   padding-left: 62rem;
@@ -220,13 +227,15 @@ body {
   padding-bottom: 3rem;
   font-weight: 800;
   letter-spacing: 0.2rem;
+  margin-bottom: 6rem;
 }
 
 .grid--4-cols {
   display: flex;
   padding-left: 10rem;
   width: 136rem;
-
+  /* grid-gap: 4rem; */
+  justify-content: space-between;
   grid-template-columns: repeat(4, 1fr);
   box-sizing: border-box;
 }
@@ -234,6 +243,55 @@ body {
   height: 40rem;
   width: 28rem;
   margin-left: 3rem;
+}
+
+.sug_anchor {
+  text-decoration: none;
+}
+
+.sug_products {
+  height: 35rem;
+  width: 28rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0.05px 0.05px 6px rgb(158, 157, 157);
+  overflow: hidden;
+}
+
+.sug_product-img {
+  height: 28rem;
+  width: 28rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transition: all 0.4s;
+}
+
+.sug_product-img:hover {
+  transform: scale(1.1);
+}
+
+.sug_price-container {
+  overflow: hidden;
+  height: 6.5rem;
+  width: 28rem;
+  background-color: rgb(251, 247, 247);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.4rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.sug_product-name {
+  color: black;
+}
+
+.sug_product-price {
+  color: blue;
 }
 
 /*************************************************/

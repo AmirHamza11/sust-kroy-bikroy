@@ -48,30 +48,24 @@
             </div>
           </div>
           <div>
-            <p class="product-title">Iconic Watch</p>
-            <p class="product-price">Tk.1500</p>
+            <p class="product-title"><%= data.product_name %></p>
+            <p class="product-price">Tk.<%= data.price %></p>
             <p class="void"></p>
             <p></p>
             <p class="product-description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
-              voluptas culpa sint debitis necessitatibus officiis, enim at quia
-              magni, tempore in consequuntur adipisci cupiditate officia ipsa
-              fuga aut dolor id?Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Similique aliquam nostrum explicabo aut. Modi
-              minus itaque voluptas totam ducimus tenetur temporibus ipsa illo,
-              necessitatibus veniam distinctio, voluptate nisi unde porro.
+              <%= data.details %>
             </p>
 
-            <p class="product-used-date">Buying Date: 5 January, 2021</p>
-            <p class="warranty">Warranty Card Available: No</p>
+            <p class="product-used-date">Buying Date: <%= data.bought_at %></p>
+            <p class="warranty">Warranty Card Available: Yes</p>
             <p class="defects">Defects: Nothing</p>
-            <p class="product-delivery-place">Delivery Place: SUST Gate</p>
-            <p class="product-contact-info">Contact Info: 10000000000</p>
+            <p class="product-delivery-place">Delivery Place: <%= data.receiving_address %></p>
+            <p class="product-contact-info">Contact Info: <%= data.contact_info %></p>
             <div class="chat-now-box">
-              <p class="chat">CHAT</p>
+              <a href="#" class="anchor"><p class="chat">CHAT</p></a>
             </div>
             <div class="buy-now-box">
-              <p class="buy">BUY IT NOW</p>
+              <a class = "anchor" href="#"><p class="buy">BUY IT NOW</p></a>
             </div>
           </div>
         </container>
@@ -79,10 +73,45 @@
       <section class="suggestion">
         <p class="suggestion-text">You May Also Like</p>
         <div class="grid--4-cols">
-          <img class="img2" src="/images/watch.jpg" />
-          <img class="img2" src="/images/watch.jpg" />
-          <img class="img2" src="/images/watch.jpg" />
-          <img class="img2" src="/images/watch.jpg" />
+          <% suggestedProducts.forEach(function(product){ %>
+            <a href="/product/<%= product.product_id %>" class="sug_anchor"><div class="sug_products">
+              <img class="sug_product-img"  src="/images/watch.jpg">
+              <div class="sug_price-container">
+                <h1 class="sug_product-name"><%= product.product_name %></h1>
+                <h1 class="sug_product-price"><span>Tk. </span><%= product.price %></h1>
+              </div>
+            </div></a>
+          <% })  %>
+
+
+          <!-- <a href="/product" class="sug_anchor"><div class="sug_products">
+            <img class="sug_product-img"  src="/images/watch.jpg">
+            <div class="sug_price-container">
+              <h1 class="sug_product-name">Men Wrist Watch</h1>
+              <h1 class="sug_product-price">Tk.1500</h1>
+            </div>
+          </div></a>
+          <a href="/product" class="sug_anchor"><div class="sug_products">
+            <img class="sug_product-img"  src="/images/watch.jpg">
+            <div class="sug_price-container">
+              <h1 class="sug_product-name">Men Wrist Watch</h1>
+              <h1 class="sug_product-price">Tk.1500</h1>
+            </div>
+          </div></a>
+          <a href="/product" class="sug_anchor"><div class="sug_products">
+            <img class="sug_product-img"  src="/images/watch.jpg">
+            <div class="sug_price-container">
+              <h1 class="sug_product-name">Men Wrist Watch</h1>
+              <h1 class="sug_product-price">Tk.1500</h1>
+            </div>
+          </div></a>
+          <a href="/product" class="sug_anchor"><div class="sug_products">
+            <img class="sug_product-img"  src="/images/watch.jpg">
+            <div class="sug_price-container">
+              <h1 class="sug_product-name">Men Wrist Watch</h1>
+              <h1 class="sug_product-price">Tk.1500</h1>
+            </div>
+          </div></a> -->
         </div>
       </section>
       <footer class="footer">
